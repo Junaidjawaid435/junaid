@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            padding: 10px;
+            border: 2px solid black;
+            color: black;
+            background-color:darkcyan ;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="test">
+    <h2>Box 1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+</div>
+<br>
+<button id="btn">Button</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+    $("#btn").click(function(){
+    $("#box").css("background-color","red").slideUp(2000).slideDown(2000,function(){
+    $("#box").css("background-color","green")    
+    });    
+    });    
+    });
+</script>
+
+
+
+
+</body>
+</html>
